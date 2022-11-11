@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="card" *ngFor="let car of cars; let index = index" [class.target]="index === 1">
+    <h4>
+      {{ car.name }}
+    </h4>
+    <img [src]="car.image" #img>
+    <div class="price">€ {{ car.price }}K</div>
+    <button (click)="moreDetails(car.id, img)">More details</button>
+  </div>
+</div>
+
+<!-- <button (click)="add()">add</button> -->
